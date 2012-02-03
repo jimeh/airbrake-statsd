@@ -14,6 +14,11 @@ module Airbrake
       end
       attr_writer :port
 
+      def bucket
+        @bucket ||= 'exceptions'
+      end
+      attr_writer :bucket
+
     end # Configuration
   end # Statsd
 end # Airbrake

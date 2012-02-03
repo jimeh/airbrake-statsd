@@ -37,6 +37,17 @@ module Airbrake
         end
       end
 
+      describe '`bucket` option' do
+        it 'defaults to "exceptions"' do
+          subject.bucket.should == 'exceptions'
+        end
+
+        it 'can be set' do
+          subject.bucket = 'errors'
+          subject.bucket.should == 'errors'
+        end
+      end
+
     end
   end
 end
