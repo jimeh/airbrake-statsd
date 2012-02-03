@@ -35,7 +35,7 @@ Airbrake.notify({})
 
 ## License and Copyright
 
-Copyright (c) 2011 Jim Myhrberg & Global Personals, Ltd.
+Copyright (c) 2012 Jim Myhrberg & Global Personals, Ltd.
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
