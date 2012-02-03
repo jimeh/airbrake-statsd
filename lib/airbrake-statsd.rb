@@ -32,7 +32,7 @@ module Airbrake
 
       def increment
         return unless configured?
-        client.increment('exceptions')
+        client.increment(config.bucket)
       end
 
     end # << self
