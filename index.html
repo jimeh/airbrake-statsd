@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Airbrake-statsd by jimeh</title>
+    
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Airbrake-statsd</h1>
+        <p>Extends the Airbrake gem to also report exceptions Esty's Statsd statistics aggregator.</p>
+        <p class="view"><a href="https://github.com/jimeh/airbrake-statsd">View the Project on GitHub <small>jimeh/airbrake-statsd</small></a></p>
+        <ul>
+          <li><a href="https://github.com/jimeh/airbrake-statsd/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/jimeh/airbrake-statsd/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/jimeh/airbrake-statsd">Fork On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h2>Installation</h2>
+
+<p>Add this to your <code>Gemfile</code>:</p>
+
+<div class="highlight">
+<pre><span class="n">gem</span> <span class="s1">'airbrake-statsd'</span>
+</pre>
+</div>
+
+
+<h2>Usage</h2>
+
+<p>It's assumed you know what both Airbrake and StatsD are before attempting to
+use this gem. If you don't, come back when you do know :)</p>
+
+<p>All that's needed is to require <code>airbrake-statsd</code> and call
+<code>Airbrake::Statsd.configure</code> and Airbrake notifications will automatically be
+sent to StatsD and Airbrake.</p>
+
+<div class="highlight">
+<pre><span class="nb">require</span> <span class="s1">'airbrake'</span>
+<span class="nb">require</span> <span class="s1">'airbrake-statsd'</span>
+
+<span class="no">Airbrake</span><span class="o">::</span><span class="no">Statsd</span><span class="o">.</span><span class="n">configure</span> <span class="k">do</span> <span class="o">|</span><span class="n">config</span><span class="o">|</span>
+  <span class="n">config</span><span class="o">.</span><span class="n">host</span> <span class="o">=</span> <span class="s1">'my-statsd-server'</span>
+  <span class="n">config</span><span class="o">.</span><span class="n">port</span> <span class="o">=</span> <span class="mi">8125</span>
+  <span class="n">config</span><span class="o">.</span><span class="n">namespace</span> <span class="o">=</span> <span class="s1">'my_awesome_app'</span>
+<span class="k">end</span>
+
+<span class="no">Airbrake</span><span class="o">.</span><span class="n">notify</span><span class="p">({})</span>
+</pre>
+</div>
+
+
+<h2>Credit &amp; Thanks</h2>
+
+<ul>
+<li>
+<a href="http://globalpersonals.co.uk/">Global Personals</a> for hosting a hack day.</li>
+</ul><h2>License and Copyright</h2>
+
+<p>Released under the MIT license. Copyright (c) 2012 Jim Myhrberg &amp; Global Personals, Ltd.</p>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/jimeh">jimeh</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+  </body>
+</html>
