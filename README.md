@@ -7,7 +7,15 @@ statistics aggregator.
 
 ## Installation
 
+Command line:
+
     gem install airbrake-statsd
+
+Gemfile:
+
+```ruby
+gem 'airbrake-statsd'
+```
 
 ## Usage
 
