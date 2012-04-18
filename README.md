@@ -1,6 +1,4 @@
-# Airbrake-Statsd
-
-[![Build Status](https://secure.travis-ci.org/jimeh/airbrake-statsd.png)](http://travis-ci.org/jimeh/airbrake-statsd)
+# Airbrake-Statsd [![Build Status](https://secure.travis-ci.org/jimeh/airbrake-statsd.png)](http://travis-ci.org/jimeh/airbrake-statsd)
 
 Extends the [Airbrake][] gem to also report exceptions to Esty's [StatsD][]
 statistics aggregator.
